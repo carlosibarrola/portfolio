@@ -11448,3 +11448,16 @@ header.masthead h1, header.masthead .h1 {
 .contenedor-icono {
     font-size: 2.5rem;
 }
+.enlace__project {
+  display: flex;
+  justify-content: center;
+  font-family: "Merriweather Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+.enlace__project a {
+  text-decoration: none;
+  letter-spacing: 3px;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 1rem;
+
+}
