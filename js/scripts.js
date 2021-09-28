@@ -1,4 +1,3 @@
-
 window.addEventListener('DOMContentLoaded', event => {
 
     // Funciones de Navbar
@@ -15,13 +14,13 @@ window.addEventListener('DOMContentLoaded', event => {
 
     };
 
-    
+
     navbarShrink();
 
-    
+
     document.addEventListener('scroll', navbarShrink);
 
-    
+
     const mainNav = document.body.querySelector('#mainNav');
     if (mainNav) {
         new bootstrap.ScrollSpy(document.body, {
@@ -48,21 +47,21 @@ window.addEventListener('DOMContentLoaded', event => {
         elements: '#portfolio a.portfolio-box'
     });
 
-});
+    /* Popup */
 
-/* Popup */
-
-window.onscroll = function(){
-    if(document.documentElement.scrollTop > 555){
-        document.querySelector('.go-top').classList.add('show');
-    }else{
-        document.querySelector('.go-top').classList.remove('show');
+    window.onscroll = function () {
+        if (document.documentElement.scrollTop > 555) {
+            document.querySelector('.go-top').classList.add('show');
+        } else {
+            document.querySelector('.go-top').classList.remove('show');
+        }
     }
-}
 
-document.querySelector('.go-top').addEventListener('click', ()=>{
-    window.scrollTo({
-        top: 0,
-        behavior: 'smooth'
+    document.querySelector('.go-top').addEventListener('click', () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        })
     })
-})
+
+});
