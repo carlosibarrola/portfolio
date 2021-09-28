@@ -1,7 +1,7 @@
 
 window.addEventListener('DOMContentLoaded', event => {
 
-    // Navbar shrink function
+    // Funciones de Navbar
     var navbarShrink = function () {
         const navbarCollapsible = document.body.querySelector('#mainNav');
         if (!navbarCollapsible) {
@@ -15,13 +15,13 @@ window.addEventListener('DOMContentLoaded', event => {
 
     };
 
-    // Shrink the navbar 
+    
     navbarShrink();
 
-    // Shrink the navbar when page is scrolled
+    
     document.addEventListener('scroll', navbarShrink);
 
-    // Activate Bootstrap scrollspy on the main nav element
+    
     const mainNav = document.body.querySelector('#mainNav');
     if (mainNav) {
         new bootstrap.ScrollSpy(document.body, {
@@ -30,7 +30,7 @@ window.addEventListener('DOMContentLoaded', event => {
         });
     };
 
-    // Collapse responsive navbar when toggler is visible
+    // Toggle cuando se colapsa en modo responsive
     const navbarToggler = document.body.querySelector('.navbar-toggler');
     const responsiveNavItems = [].slice.call(
         document.querySelectorAll('#navbarResponsive .nav-link')
@@ -43,9 +43,26 @@ window.addEventListener('DOMContentLoaded', event => {
         });
     });
 
-    // Activate SimpleLightbox plugin for portfolio items
+    // SimpleLightbox plugin para el portfolio
     new SimpleLightbox({
         elements: '#portfolio a.portfolio-box'
     });
 
 });
+
+/* Popup */
+
+window.onscroll = function(){
+    if(document.documentElement.scrollTop > 555){
+        document.querySelector('.go-top').classList.add('show');
+    }else{
+        document.querySelector('.go-top').classList.remove('show');
+    }
+}
+
+document.querySelector('.go-top').addEventListener('click', ()=>{
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    })
+})
